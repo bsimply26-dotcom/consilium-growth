@@ -132,6 +132,8 @@ h3{font-size:clamp(16px,1.4vw,18px);font-stretch:100%;letter-spacing:-0.01em;lin
 
 /* forms */
 .field{margin-bottom:22px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,22px)}
+.card img{width:100%;height:200px;object-fit:cover}
 .field label{display:block;font-family:"Archivo",Arial,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--label);margin-bottom:10px}
 .field input,.field textarea,.field select{
   width:100%;background:#0B0D0C;border:1px solid var(--rule);color:var(--white);
@@ -143,6 +145,9 @@ h3{font-size:clamp(16px,1.4vw,18px);font-stretch:100%;letter-spacing:-0.01em;lin
 @media (max-width:900px){
   .split{grid-template-columns:1fr}
   .grid-3,.stats{grid-template-columns:1fr}
+  .field-row{grid-template-columns:1fr}
+  .method{min-height:auto;background-position:center 38%}
+  .method .wrap{padding-top:64px;padding-bottom:64px}
   .stages{grid-template-columns:repeat(2,1fr);gap:28px}
   .nav{display:none}
   .nav.open{display:flex;position:absolute;top:74px;right:var(--pad);flex-direction:column;gap:18px;background:var(--surface);border:1px solid var(--rule);padding:22px 26px}
