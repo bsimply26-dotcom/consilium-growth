@@ -36,18 +36,28 @@
       <p class="lead" style="margin-top:26px">hello@consiliumgrowth.com<br>Dubai, United Arab Emirates</p>
     </div>
 
-<form action="https://formspree.io/f/xpqvyvqv" method="POST">
-      <div class="field">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required>
+    <form action="https://formspree.io/f/xpqvyvqv" method="POST">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="New enquiry from consiliumgrowth.com">
+      <div class="field-row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" required>
+        </div>
       </div>
-      <div class="field">
-        <label for="company">Company</label>
-        <input id="company" name="company" type="text" required>
-      </div>
-      <div class="field">
-        <label for="email">Work email</label>
-        <input id="email" name="email" type="email" required>
+      <div class="field-row">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel">
+        </div>
       </div>
       <div class="field">
         <label for="market">Market of interest</label>
@@ -63,7 +73,7 @@
         </select>
       </div>
       <div class="field">
-        <label for="message">What are you trying to do</label>
+        <label for="message">Tell us about your project</label>
         <textarea id="message" name="message" rows="5" required></textarea>
       </div>
       <button class="btn btn-primary" type="submit">Send</button>
