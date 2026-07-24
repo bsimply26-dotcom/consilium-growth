@@ -76,9 +76,9 @@ h3{font-size:clamp(16px,1.4vw,18px);font-stretch:100%;letter-spacing:-0.01em;lin
 /* hero */
 .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink)}
 .hero-word{
-  position:absolute;left:0;right:0;top:22%;z-index:1;text-align:center;
+  position:absolute;left:0;right:0;top:15%;z-index:1;text-align:center;
   font-family:"Archivo",Arial,sans-serif;font-weight:800;font-stretch:100%;
-  font-size:clamp(56px,15.5vw,240px);line-height:0.9;letter-spacing:0.01em;
+  font-size:min(clamp(56px,15.5vw,240px),24vh);line-height:0.9;letter-spacing:0.01em;
   color:#fff;user-select:none;
 }
 .hero-city{position:absolute;left:0;right:0;bottom:0;height:56%;z-index:2}
