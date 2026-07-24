@@ -1,8 +1,8 @@
 (function () {
-  var lines = [
-    "We do not write the plan. We run it.",
-    "Most brands get the Gulf wrong. We get it right.",
-    "Strategy is common. Execution is rare."
+ var lines = [
+    "We do not write the plan.\nWe run it.",
+    "Most brands get the Gulf wrong.\nWe get it right.",
+    "Strategy is common.\nExecution is rare."
   ];
   var head = document.querySelector("[data-rotate]");
   var slides = document.querySelectorAll(".hero-city span");
