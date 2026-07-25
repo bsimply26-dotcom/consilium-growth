@@ -4,93 +4,71 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact. Consilium Growth.</title>
-<meta name="description" content="Talk to Consilium Growth about entering the Gulf. Dubai, UAE.">
-<meta property="og:title" content="Contact. Consilium Growth.">
-<meta property="og:image" content="https://consiliumgrowth.com/assets/img/share.jpg">
+<meta name="description" content="Talk to Consilium Growth about entering a new market.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body id="top">
 
-<header class="site-head" style="position:relative">
+<header class="site-head">
   <div class="wrap head-inner">
-    <a class="mark" href="index.html">Consilium Growth <span class="dot"></span></a>
+    <a class="mark" href="/">Consilium Growth <span class="dot"></span></a>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" data-nav>&#9776;</button>
     <nav class="nav" id="nav">
-      <a href="index.html#perspective">Our perspective</a>
-      <a href="index.html#edge">Our edge</a>
-      <a href="index.html#method">Our method</a>
-      <a href="index.html#work">The work</a>
+      <a href="index.html#perspective">Perspective</a>
+      <a href="index.html#edge">Edge</a>
+      <a href="index.html#method">Method</a>
+      <a href="index.html#record">Record</a>
+      <a href="index.html#sectors">Sectors</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<section class="section">
-  <div class="wrap split" style="align-items:start">
-    <div>
-      <p class="eyebrow">Contact</p>
-      <h2 style="margin:26px 0 28px">Do not enter<br><span class="green">the Gulf alone.</span></h2>
-      <p class="lead">Tell us the market, the category and the timeline. We reply to every enquiry that includes those three things.</p>
-      <p class="lead" style="margin-top:26px">hello@consiliumgrowth.com<br>Dubai, United Arab Emirates</p>
-    </div>
+<section class="section" style="border-top:0;padding-top:56px">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2 style="margin:22px 0 10px;font-size:clamp(30px,9vw,54px)">Do not enter<br>a new market alone.</h2>
+    <p class="lead" style="margin-top:16px;max-width:52ch">Tell us the market and the brand. We will tell you whether to go, and what it takes.</p>
 
-    <form action="https://formspree.io/f/xpqvyvqv" method="POST">
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-      <input type="hidden" name="_subject" value="New enquiry from consiliumgrowth.com">
-      <div class="field-row">
-        <div class="field">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required>
-        </div>
-        <div class="field">
-          <label for="company">Company</label>
-          <input id="company" name="company" type="text" required>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required>
-        </div>
-        <div class="field">
-          <label for="phone">Phone (optional)</label>
-          <input id="phone" name="phone" type="tel">
-        </div>
+    <!-- OPEN ITEM: replace YOUR_FORM_ID with the Consilium Growth Formspree endpoint before publishing. -->
+    <form class="contact-block" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
       </div>
       <div class="field">
-        <label for="market">Market of interest</label>
-        <select id="market" name="market">
-          <option>United Arab Emirates</option>
-          <option>Saudi Arabia</option>
-          <option>Qatar</option>
-          <option>Kuwait</option>
-          <option>Bahrain</option>
-          <option>Oman</option>
-          <option>The wider GCC</option>
-          <option>Not decided</option>
-        </select>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
       </div>
       <div class="field">
-        <label for="message">Tell us about your project</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="company">Company</label>
+        <input id="company" name="company" type="text">
+      </div>
+      <div class="field">
+        <label for="message">What are you trying to do</label>
+        <textarea id="message" name="message" required></textarea>
       </div>
       <button class="btn btn-primary" type="submit">Send</button>
-      <p class="form-note">We reply within two working days.</p>
     </form>
+
+    <p class="contact-detail">hello@consiliumgrowth.com &nbsp;/&nbsp; Dubai, UAE</p>
   </div>
 </section>
 
 <footer class="site-foot">
   <div class="wrap foot-inner">
     <div>
-      <a class="mark" href="index.html">Consilium Growth <span class="dot"></span></a>
-      <span class="descriptor">GCC market entry and growth</span>
+      <a class="mark" href="/">Consilium Growth <span class="dot"></span></a>
+      <span class="descriptor">Market entry and growth</span>
     </div>
-    <small>hello@consiliumgrowth.com &nbsp; / &nbsp; Dubai, UAE</small>
+    <small>hello@consiliumgrowth.com &nbsp;/&nbsp; Dubai, UAE</small>
   </div>
 </footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><svg viewBox="0 0 24 24"><polyline points="6 15 12 9 18 15"/></svg></button>
 
 <script src="assets/js/main.js"></script>
 </body>
