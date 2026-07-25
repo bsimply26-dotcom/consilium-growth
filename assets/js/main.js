@@ -2,10 +2,10 @@
 (function () {
   // Hero rotation: headline and city change together so they never contradict.
   var slides = [
-    { city: "Dubai",    h: "Most brands get market entry wrong.<br>We get it <span class='green'>right.</span>" },
-    { city: "London",   h: "We do not write the plan.<br>We <span class='green'>run it.</span>" },
-    { city: "Shanghai", h: "Strategy is common.<br>Execution is <span class='green'>rare.</span>" },
-    { city: "New York", h: "Eleven markets.<br>Built from <span class='green'>zero.</span>" }
+    { city: "Dubai",    h: "<span class='ln'>Most brands get market entry wrong.</span><span class='ln'>We get it <span class='green'>right.</span></span>" },
+    { city: "London",   h: "<span class='ln'>We do not write the plan.</span><span class='ln'>We <span class='green'>run it.</span></span>" },
+    { city: "Shanghai", h: "<span class='ln'>Strategy is common.</span><span class='ln'>Execution is <span class='green'>rare.</span></span>" },
+    { city: "New York", h: "<span class='ln'>Eleven markets.</span><span class='ln'>Built from <span class='green'>zero.</span></span>" }
   ];
   var layers = document.querySelectorAll('.hero-city .layer');
   var head = document.querySelector('[data-headline]');
