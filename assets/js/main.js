@@ -2,7 +2,7 @@
 (function () {
   // Hero rotation: headline and city change together so they never contradict.
   var slides = [
-    { city: "Dubai",    h: "Most brands get the Gulf wrong.<br>We get it <span class='green'>right.</span>" },
+    { city: "Dubai",    h: "Most brands get market entry wrong.<br>We get it <span class='green'>right.</span>" },
     { city: "London",   h: "We do not write the plan.<br>We <span class='green'>run it.</span>" },
     { city: "Shanghai", h: "Strategy is common.<br>Execution is <span class='green'>rare.</span>" },
     { city: "New York", h: "Eleven markets.<br>Built from <span class='green'>zero.</span>" }
