@@ -30,15 +30,15 @@ h1,h2,h3{font-family:var(--disp);color:var(--white);text-transform:uppercase;fon
 .nav a:hover{color:var(--white)}
 
 /* hero */
-.hero{position:relative;min-height:90vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--deep);padding-bottom:36px}
-.hero-word{position:absolute;left:-2vw;top:12vh;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:27vw;line-height:0.8;letter-spacing:-0.03em;color:transparent;-webkit-text-stroke:1px #1e1e1e;white-space:nowrap;pointer-events:none;z-index:1}
+.hero{position:relative;min-height:max(88vh,660px);display:flex;align-items:flex-end;overflow:hidden;background:var(--deep);padding-bottom:36px}
+.hero-word{position:absolute;left:-1vw;top:11vh;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:min(clamp(56px,15.5vw,240px),24vh);line-height:0.82;letter-spacing:-0.03em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,0.17);white-space:nowrap;pointer-events:none;z-index:1}
 .hero-city{position:absolute;left:0;right:0;bottom:0;height:66vh;z-index:2}
 .hero-city .layer{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;background-size:cover;background-position:center 45%}
 .hero-city .layer.on{opacity:1}
 .hero-scrim{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to bottom,#090909 0%,rgba(9,9,9,0.5) 13%,rgba(9,9,9,0.04) 38%,rgba(9,9,9,0.04) 56%,rgba(9,9,9,0.6) 85%,rgba(9,9,9,0.95) 100%)}
 .hero-inner{position:relative;z-index:3;width:100%}
 .hero-rule{width:2px;height:46px;background:var(--green);margin-bottom:22px}
-.hero h1{font-size:clamp(38px,12vw,74px);letter-spacing:-0.02em;text-shadow:0 2px 30px rgba(0,0,0,0.6)}
+.hero h1{font-size:clamp(34px,8vw,56px);letter-spacing:-0.02em;text-shadow:0 2px 30px rgba(0,0,0,0.6)}
 .hero-cta{display:flex;flex-direction:column;gap:12px;margin-top:26px}
 .hero-cta .btn{text-align:center}
 .dots{display:flex;gap:8px;margin-top:26px}
@@ -48,7 +48,7 @@ h1,h2,h3{font-family:var(--disp);color:var(--white);text-transform:uppercase;fon
 /* sections */
 .section{padding:64px 0;border-top:1px solid var(--rule)}
 .section.surface{background:var(--surface)}
-.section h2{font-size:clamp(30px,9vw,54px);margin:22px 0 22px}
+.section h2{font-size:clamp(24px,6vw,40px);margin:22px 0 22px}
 
 /* offers */
 .offers{margin-top:14px}
@@ -98,6 +98,8 @@ h1,h2,h3{font-family:var(--disp);color:var(--white);text-transform:uppercase;fon
 
 /* contact */
 .contact-block{margin-top:34px;max-width:560px}
+.field-row{display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:520px){.field-row{grid-template-columns:1fr 1fr;gap:16px}}
 .field{margin-bottom:18px}
 .field label{display:block;font-family:var(--disp);font-weight:700;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--label);margin-bottom:8px}
 .field input,.field textarea{width:100%;background:var(--deep);border:1px solid var(--rule);color:var(--white);font-family:var(--text);font-size:16px;padding:13px 14px}
