@@ -1,37 +1,43 @@
+/* Consilium Growth. Production script. */
 (function () {
- var lines = [
-    "We do not write the plan.\nWe run it.",
-    "Most brands get the Gulf wrong.\nWe get it right.",
-    "Strategy is common.\nExecution is rare."
+  // Hero rotation: headline and city change together so they never contradict.
+  var slides = [
+    { city: "Dubai",    h: "Most brands get the Gulf wrong.<br>We get it <span class='green'>right.</span>" },
+    { city: "London",   h: "We do not write the plan.<br>We <span class='green'>run it.</span>" },
+    { city: "Shanghai", h: "Strategy is common.<br>Execution is <span class='green'>rare.</span>" },
+    { city: "New York", h: "Eleven markets.<br>Built from <span class='green'>zero.</span>" }
   ];
-  var head = document.querySelector("[data-rotate]");
-  var slides = document.querySelectorAll(".hero-city span");
-  var dots = document.querySelectorAll(".dots i");
+  var layers = document.querySelectorAll('.hero-city .layer');
+  var head = document.querySelector('[data-headline]');
+  var dots = document.querySelectorAll('.dots i');
   var i = 0;
 
-  if (head && slides.length) {
-    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!reduce) {
-      setInterval(function () {
-        i = (i + 1) % lines.length;
-        head.style.opacity = 0;
-        setTimeout(function () {
-          head.textContent = lines[i];
-          head.style.opacity = 1;
-        }, 320);
-        slides.forEach(function (s, n) { s.classList.toggle("on", n === i); });
-        dots.forEach(function (dt, n) { dt.classList.toggle("on", n === i); });
-      }, 7000);
-      head.style.transition = "opacity .32s ease";
-    }
+  function show(n) {
+    layers.forEach(function (s) { s.classList.toggle('on', s.dataset.city === slides[n].city); });
+    if (head) head.innerHTML = slides[n].h;
+    dots.forEach(function (d, di) { d.classList.toggle('on', di === n); });
+  }
+  if (layers.length) {
+    setInterval(function () { i = (i + 1) % slides.length; show(i); }, 3800);
   }
 
-  var btn = document.querySelector("[data-nav]");
-  var nav = document.getElementById("nav");
-  if (btn && nav) {
-    btn.addEventListener("click", function () {
-      var open = nav.classList.toggle("open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
+  // Mobile nav toggle
+  var toggle = document.querySelector('[data-nav]');
+  var nav = document.getElementById('nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { nav.classList.remove('open'); });
+    });
+  }
+
+  // Back to top
+  var tt = document.getElementById('totop');
+  if (tt) {
+    window.addEventListener('scroll', function () { tt.classList.toggle('show', window.scrollY > 500); });
+    tt.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
   }
 })();
