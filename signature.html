@@ -106,11 +106,12 @@ textarea{position:absolute;left:-9999px;top:0;width:1px;height:1px}
       var ok=document.execCommand('copy');return ok;}catch(e){return false;}
   }
   document.getElementById('copyRich').addEventListener('click',function(){
+    if(selectCopy(sig)){window.getSelection().removeAllRanges();say('Copied. Now paste it into Mail.');return;}
     if(window.ClipboardItem&&navigator.clipboard&&navigator.clipboard.write){
       navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})])
-        .then(function(){say('Signature copied. Paste it into Mail.');})
-        .catch(function(){say(selectCopy(sig)?'Signature copied. Paste it into Mail.':'Signature selected. Tap Copy from the menu.');});
-    } else { say(selectCopy(sig)?'Signature copied. Paste it into Mail.':'Signature selected. Tap Copy from the menu.'); }
+        .then(function(){say('Copied. Now paste it into Mail.');})
+        .catch(function(){say('Copy blocked. Long-press the name, drag to select all, then tap Copy.');});
+    } else { say('Copy blocked. Long-press the name, drag to select all, then tap Copy.'); }
   });
   document.getElementById('copyCode').addEventListener('click',function(){
     var fb=function(){code.style.position='static';code.style.width='100%';code.style.height='160px';code.removeAttribute('aria-hidden');code.select();
