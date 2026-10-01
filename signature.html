@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Consilium Growth Signature</title>
+<style>
+/* Layout: one narrow column. Preview card (always white, as recipients see it), copy actions, then install steps. */
+:root{
+  --bg:#F3F4F2; --fg:#111312; --muted:#5E625F; --rule:#D9DCD9; --surface:#FFFFFF;
+  --green:#163B2C; --green-soft:#E3ECE7; --on-green:#FFFFFF;
+  --disp:"Archivo",Arial,sans-serif; --text:"Inter",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B0C0B; --fg:#EDEFED; --muted:#9BA19D; --rule:#262926; --surface:#141614;
+  --green:#60A886; --green-soft:#16241D; --on-green:#07110C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B0C0B; --fg:#EDEFED; --muted:#9BA19D; --rule:#262926; --surface:#141614;
+  --green:#60A886; --green-soft:#16241D; --on-green:#07110C; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--text);font-size:15px;line-height:1.55;padding-inline:16px;padding-block:28px 48px}
+.wrap{max-width:620px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+.mark{font-family:var(--disp);font-weight:800;text-transform:uppercase;letter-spacing:-.01em;font-size:14px;display:flex;align-items:center;gap:6px}
+.mark i{width:8px;height:8px;background:var(--green);display:inline-block}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(24px,5vw,32px);line-height:1.1;margin:0;text-wrap:balance}
+.lede{color:var(--muted);margin:6px 0 0}
+.label{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:600;margin:0 0 10px}
+.card{background:#FFFFFF;border:1px solid var(--rule);border-radius:6px;padding:24px;overflow-x:auto}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+button{font:600 15px/1 var(--text);padding:14px 18px;border-radius:6px;cursor:pointer;border:1px solid var(--green)}
+.primary{background:var(--green);color:var(--on-green)}
+.secondary{background:transparent;color:var(--fg);border-color:var(--rule)}
+button:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.status{min-height:1.4em;color:var(--green);font-weight:600;margin:4px 0 0;font-size:14px}
+.steps{display:grid;gap:18px}
+.step h2{font-family:var(--disp);font-size:17px;margin:0 0 6px}
+.step ol{margin:0;padding-left:20px;display:grid;gap:4px}
+.tip{background:var(--green-soft);border-radius:6px;padding:12px 14px;font-size:14px;margin-top:10px}
+textarea{position:absolute;left:-9999px;top:0;width:1px;height:1px}
+</style>
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Inter:wght@400;600&display=swap">
+
+<div class="wrap">
+  <header>
+    <div class="mark">Consilium Growth <i></i></div>
+    <h1 style="margin-top:14px">Email signature</h1>
+    <p class="lede">Jatinder Gakhal. Copy it below, then paste it into Apple Mail and webmail.</p>
+  </header>
+
+  <section>
+    <p class="label">Preview</p>
+    <div class="card" id="sig"><table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#090909;"><tr><td style="padding:0;font-family:Arial,Helvetica,sans-serif;">
+<div style="font-size:16px;line-height:20px;font-weight:bold;color:#090909;">Jatinder Gakhal</div>
+<div style="font-size:13px;line-height:18px;color:#666666;padding-bottom:10px;">Co-Founder &amp; Managing Director</div>
+<div style="font-size:13px;line-height:19px;color:#090909;">M&nbsp;&nbsp;<a href="tel:+971545005336" style="color:#090909;text-decoration:none;">+971 54 500 5336</a></div>
+<div style="font-size:13px;line-height:19px;color:#090909;">E&nbsp;&nbsp;<a href="mailto:jatinder@consiliumgrowth.com" style="color:#090909;text-decoration:none;">jatinder@consiliumgrowth.com</a></div>
+<div style="font-size:13px;line-height:19px;color:#090909;padding-bottom:12px;">W&nbsp;&nbsp;<a href="https://consiliumgrowth.com" style="color:#163B2C;text-decoration:none;font-weight:bold;">consiliumgrowth.com</a></div>
+<div style="border-top:1px solid #DDDDDD;width:220px;font-size:1px;line-height:1px;">&nbsp;</div>
+<div style="font-size:14px;line-height:18px;font-weight:bold;color:#090909;letter-spacing:0.5px;padding-top:10px;">CONSILIUM GROWTH<span style="color:#163B2C;">&#9632;</span></div>
+<div style="font-size:12px;line-height:17px;color:#666666;">Anyone can advise. Few can operate.</div>
+</td></tr></table></div>
+  </section>
+
+  <section>
+    <div class="actions">
+      <button class="primary" id="copyRich" type="button">Copy signature</button>
+      <button class="secondary" id="copyCode" type="button">Copy HTML code</button>
+    </div>
+    <p class="status" id="status" aria-live="polite"></p>
+    <textarea id="code" aria-hidden="true" tabindex="-1"></textarea>
+  </section>
+
+  <section class="steps">
+    <p class="label" style="margin:0">Install</p>
+    <div class="step">
+      <h2>Apple Mail on iPad or iPhone</h2>
+      <ol>
+        <li>Tap <b>Copy signature</b> above.</li>
+        <li>Open <b>Settings</b>, then <b>Apps</b>, then <b>Mail</b>, then <b>Signature</b>.</li>
+        <li>Choose <b>Per Account</b>, clear the box under the Consilium account, and paste.</li>
+      </ol>
+      <div class="tip">If the formatting drops after pasting, tap Undo straight away (iPad keyboard Undo arrow, or shake an iPhone and tap Undo). Apple Mail restores the bold and colours.</div>
+    </div>
+    <div class="step">
+      <h2>Hostinger webmail</h2>
+      <ol>
+        <li>Tap <b>Copy signature</b> above.</li>
+        <li>In webmail, open <b>Settings</b>, then <b>Signature</b>.</li>
+        <li>Paste into the signature box and save. If the editor has an HTML or source view, use <b>Copy HTML code</b> and paste that instead.</li>
+      </ol>
+    </div>
+  </section>
+</div>
+
+<script>
+(function(){
+  var sig=document.getElementById('sig'), status=document.getElementById('status'), code=document.getElementById('code');
+  var html=sig.innerHTML.trim();
+  var plain="Jatinder Gakhal\nCo-Founder & Managing Director\n\nM  +971 54 500 5336\nE  jatinder@consiliumgrowth.com\nW  consiliumgrowth.com\n\nCONSILIUM GROWTH\nAnyone can advise. Few can operate.";
+  code.value=html;
+  function say(t){status.textContent=t;}
+  function selectCopy(node){
+    try{var r=document.createRange();r.selectNodeContents(node);var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+      var ok=document.execCommand('copy');return ok;}catch(e){return false;}
+  }
+  document.getElementById('copyRich').addEventListener('click',function(){
+    if(window.ClipboardItem&&navigator.clipboard&&navigator.clipboard.write){
+      navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([plain],{type:'text/plain'})})])
+        .then(function(){say('Signature copied. Paste it into Mail.');})
+        .catch(function(){say(selectCopy(sig)?'Signature copied. Paste it into Mail.':'Signature selected. Tap Copy from the menu.');});
+    } else { say(selectCopy(sig)?'Signature copied. Paste it into Mail.':'Signature selected. Tap Copy from the menu.'); }
+  });
+  document.getElementById('copyCode').addEventListener('click',function(){
+    var fb=function(){code.style.position='static';code.style.width='100%';code.style.height='160px';code.removeAttribute('aria-hidden');code.select();
+      var ok=false;try{ok=document.execCommand('copy');}catch(e){} say(ok?'HTML code copied.':'Code shown below. Select it and copy.');};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(html).then(function(){say('HTML code copied.');}).catch(fb);} else fb();
+  });
+})();
+</script>
+</body>
+</html>
